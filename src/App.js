@@ -2,20 +2,22 @@ import React from 'react';
 import Header from './Components/Header';
 import CategoriaProvider from './Context/CategoriaContext';
 import Formulario from './Components/Formulario';
+import EventosProvider from './Context/EventosContext';
+import ListaEvento from './Components/ListaEvento';
 
 
 function App() {
   return (
-    <div>
-      
+    <EventosProvider>
       <CategoriaProvider>
-        <Header/>
+        <Header />
         <div className="uk-container">
-             <Formulario/>
+          <Formulario />
+          <ListaEvento/>
         </div>
-     
-        </CategoriaProvider>
-    </div>
+
+      </CategoriaProvider>
+    </EventosProvider>
   );
 }
 
